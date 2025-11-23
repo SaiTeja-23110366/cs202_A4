@@ -1,0 +1,19 @@
+﻿using System;
+
+namespace OrderPipeline
+{
+    // Custom EventArgs to hold order details
+    public class OrderEventArgs : EventArgs
+    {
+        public string CustomerName { get; }
+        public string Product { get; }
+        public int Quantity { get; }
+
+        public OrderEventArgs(string name, string product, int quantity)
+        {
+            CustomerName = name;
+            Product = product;
+            Quantity = quantity;
+        }
+    }
+}
